@@ -8,7 +8,10 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController ()
+@interface RootViewController () <UIWebViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UITextField *urlTextField;
 
 @end
 
@@ -16,12 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.webView.delegate = self;
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
+
+
+
+
+
 
 @end
