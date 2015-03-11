@@ -53,6 +53,26 @@
     [self.webView goForward];
 }
 
+// clicking the Reload button in the webView reloads the current url
+- (IBAction)onReloadButtonPressed:(UIButton *)sender {
+    [self.webView reload];
+}
+
+
+
+
+
+
+// clicking the Stop button in webView stops loading immediately
+- (IBAction)onStopLoadingButtonPressed:(UIButton *)sender {
+    [self.webView stopLoading];
+}
+
+
+
+
+
+
 
 # pragma mark - Helper methods
 
