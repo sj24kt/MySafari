@@ -48,6 +48,10 @@
     [self.webView goBack];
 }
 
+// clicking the > in the bottom webView goes forward to previous viewed url
+- (IBAction)onForwardButtonPressed:(UIButton *)sender {
+    [self.webView goForward];
+}
 
 
 # pragma mark - Helper methods
