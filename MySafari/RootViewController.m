@@ -41,6 +41,14 @@
     [self.spinner stopAnimating];
 }
 
+# pragma mark - IBActions
+
+// clicking the < in the bottom webView returns to previous url
+- (IBAction)onBackButtonPressed:(UIButton *)sender {
+    [self.webView goBack];
+}
+
+
 
 # pragma mark - Helper methods
 
