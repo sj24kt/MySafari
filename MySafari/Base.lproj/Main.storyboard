@@ -45,6 +45,13 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="47m-KL-SaY"/>
                                 </connections>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Cl5-Cr-dFo">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="190" y="290" width="37" height="37"/>
+                                </variation>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -52,6 +59,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Dnh-gE-nI5" secondAttribute="trailing" constant="-16" id="4QO-E9-Uwj"/>
                             <constraint firstItem="a6L-1R-9oP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="4pN-Iq-cFU"/>
                             <constraint firstItem="Dnh-gE-nI5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="9kc-KX-WR3"/>
+                            <constraint firstAttribute="centerX" secondItem="Cl5-Cr-dFo" secondAttribute="centerX" id="GPh-3v-Ia0"/>
+                            <constraint firstAttribute="centerY" secondItem="Cl5-Cr-dFo" secondAttribute="centerY" id="Mvx-55-Buv"/>
                             <constraint firstItem="a6L-1R-9oP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="RZa-7N-mwc"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Dnh-gE-nI5" secondAttribute="bottom" id="oG9-2V-UX1"/>
                             <constraint firstItem="Dnh-gE-nI5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="y9H-hx-SwI"/>
@@ -60,6 +69,7 @@
                             <mask key="subviews">
                                 <exclude reference="Dnh-gE-nI5"/>
                                 <exclude reference="a6L-1R-9oP"/>
+                                <exclude reference="Cl5-Cr-dFo"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="4QO-E9-Uwj"/>
@@ -68,6 +78,8 @@
                                 <exclude reference="0Vw-Eo-4CT"/>
                                 <exclude reference="4pN-Iq-cFU"/>
                                 <exclude reference="RZa-7N-mwc"/>
+                                <exclude reference="GPh-3v-Ia0"/>
+                                <exclude reference="Mvx-55-Buv"/>
                                 <exclude reference="oG9-2V-UX1"/>
                             </mask>
                         </variation>
@@ -75,6 +87,7 @@
                             <mask key="subviews">
                                 <include reference="Dnh-gE-nI5"/>
                                 <include reference="a6L-1R-9oP"/>
+                                <include reference="Cl5-Cr-dFo"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="4QO-E9-Uwj"/>
@@ -83,11 +96,14 @@
                                 <include reference="0Vw-Eo-4CT"/>
                                 <include reference="4pN-Iq-cFU"/>
                                 <include reference="RZa-7N-mwc"/>
+                                <include reference="GPh-3v-Ia0"/>
+                                <include reference="Mvx-55-Buv"/>
                                 <include reference="oG9-2V-UX1"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="spinner" destination="Cl5-Cr-dFo" id="Pgg-9t-uBw"/>
                         <outlet property="urlTextField" destination="a6L-1R-9oP" id="wPQ-7O-M7I"/>
                         <outlet property="webView" destination="Dnh-gE-nI5" id="VCZ-Hc-goB"/>
                     </connections>

@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UITextField *urlTextField;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -29,6 +30,17 @@
     [self goToURLString:textField.text];
     return YES;
 }
+
+// while the webView is loading show the spinner
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    [self.spinner startAnimating];
+}
+
+// when the webView finishes loading hide the spinner
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.spinner stopAnimating];
+}
+
 
 # pragma mark - Helper methods
 
