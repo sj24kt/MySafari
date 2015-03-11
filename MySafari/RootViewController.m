@@ -13,7 +13,8 @@
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UITextField *urlTextField;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
-
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
+@property (strong, nonatomic) IBOutlet UIButton *forwardButton;
 @end
 
 @implementation RootViewController
@@ -43,14 +44,27 @@
 
 # pragma mark - IBActions
 
-// clicking the < in the bottom webView returns to previous url
+// clicking the < in the bottom webView returns to previous url if it can
 - (IBAction)onBackButtonPressed:(UIButton *)sender {
-    [self.webView goBack];
+
+    // check if we can go back
+    if ([self.webView canGoBack]) {
+        [self.webView goBack];
+        [self.backButton setEnabled:YES];
+    } else {
+        [self.backButton setEnabled:NO];
+    }
 }
 
-// clicking the > in the bottom webView goes forward to previous viewed url
+// clicking the > in the bottom webView goes forward to previous viewed url if it can
 - (IBAction)onForwardButtonPressed:(UIButton *)sender {
-    [self.webView goForward];
+    // check if we can go forward
+    if ([self.webView canGoForward]) {
+        [self.webView goForward];
+        [self.forwardButton setEnabled:YES];
+    } else {
+        [self.forwardButton setEnabled:NO];
+    }
 }
 
 // clicking the Reload button in the webView reloads the current url

@@ -284,6 +284,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Xcn-1T-Iok" id="AVx-Yt-g1Z"/>
+                        <outlet property="forwardButton" destination="0w5-ab-exy" id="526-eu-kdT"/>
                         <outlet property="spinner" destination="Cl5-Cr-dFo" id="Pgg-9t-uBw"/>
                         <outlet property="urlTextField" destination="a6L-1R-9oP" id="wPQ-7O-M7I"/>
                         <outlet property="webView" destination="Dnh-gE-nI5" id="VCZ-Hc-goB"/>
