@@ -90,7 +90,7 @@
     //self.navTitle.title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 
     NSString* title = [self.webView stringByEvaluatingJavaScriptFromString: @"document.title"];
-    self.urlTextField.text = title;
+    self.title = title;
 
 //    self.navTitle.title = title;
 //    NSLog(@"Title: %@", self.navTitle.title);
