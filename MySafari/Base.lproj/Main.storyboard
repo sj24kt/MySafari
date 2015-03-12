@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hSa-hH-vdq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -48,9 +48,6 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Cl5-Cr-dFo">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                 <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="190" y="290" width="37" height="37"/>
-                                </variation>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7p-8g-StZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -153,6 +150,9 @@
                                                 <include reference="lWa-nJ-gZ2"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="comingSoonButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WZO-Oq-w5h"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,7 +226,9 @@
                             <constraint firstItem="a6L-1R-9oP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="0Vw-Eo-4CT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dnh-gE-nI5" secondAttribute="trailing" constant="-16" id="4QO-E9-Uwj"/>
                             <constraint firstItem="a6L-1R-9oP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="4pN-Iq-cFU"/>
-                            <constraint firstItem="Dnh-gE-nI5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="9kc-KX-WR3"/>
+                            <constraint firstItem="Dnh-gE-nI5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="9kc-KX-WR3">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="Cl5-Cr-dFo" secondAttribute="centerX" id="GPh-3v-Ia0"/>
                             <constraint firstAttribute="centerY" secondItem="Cl5-Cr-dFo" secondAttribute="centerY" id="Mvx-55-Buv"/>
                             <constraint firstItem="a6L-1R-9oP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="RZa-7N-mwc"/>
@@ -283,6 +285,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="H9T-vS-GG0"/>
                     <connections>
                         <outlet property="backButton" destination="Xcn-1T-Iok" id="AVx-Yt-g1Z"/>
                         <outlet property="forwardButton" destination="0w5-ab-exy" id="526-eu-kdT"/>
@@ -293,6 +296,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1168.5" y="-408"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YUn-Lq-tRO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hSa-hH-vdq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n7t-1M-amO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="B0M-M9-Ekw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1WK-PU-ZQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="-408"/>
         </scene>
     </scenes>
 </document>
